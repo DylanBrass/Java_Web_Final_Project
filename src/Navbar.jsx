@@ -3,18 +3,24 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 
 function Navbar() {
     return (
-        <nav>
-            <ul>
-                <li>
-                    <Link to="/">Home</Link>
-                </li>
-                <li>
-                    <Link to="/Quiz">Quiz</Link>
-                </li>
-                <li>
-                    <Link to="/Countries">Countries</Link>
-                </li>
-            </ul>
+        <nav className="container">
+            <div className="row">
+                <div className="col-4 text-center">
+                    <button>
+                        <Link to="/">Home</Link>
+                    </button>
+                </div>
+                <div className="col-4 text-center">
+                    <button>
+                        <Link to="/Quiz">Quiz</Link>
+                    </button>
+                </div>
+                <div className="col-4 text-center">
+                    <button>
+                        <Link to="/Countries">Countries</Link>
+                    </button>
+                </div>
+            </div>
         </nav>
     );
 }

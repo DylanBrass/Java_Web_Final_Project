@@ -5,6 +5,8 @@ import Home from "./pages/Home";
 import Quiz from "./pages/Quiz";
 import Countries from "./pages/Countries";
 import NoPage from "./pages/NoPage";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 export default function App() {
   return (
