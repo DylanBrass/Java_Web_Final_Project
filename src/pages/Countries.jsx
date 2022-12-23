@@ -9,9 +9,9 @@ function Countries() {
     const [countries, setCountries] = useState([]);
 
     const loadCountriesFromAPI = () => {
-        axios.get("http://localhost:8080/api/Countries")
+        axios.get("http://localhost:8080/api/countries")
             .then(function (response) {
-                if (response.status == 200) {
+                if (response.status === 200) {
                     console.log(response);
                     setCountries(response.data);
                 }
@@ -26,9 +26,9 @@ function Countries() {
     }, []);
 
     const getCountriesFromSearch = (search) => {
-        axios.get("http://localhost:8080/api/Countries?countryName=" + search)
+        axios.get("http://localhost:8080/api/countries?countryName=" + search)
             .then(function (response) {
-                if (response.status == 200) {
+                if (response.status === 200) {
                     console.log(response);
                     setCountries(response.data);
                 }
@@ -44,7 +44,7 @@ function Countries() {
 
         const search = event.target.elements.search.value;
 
-        if (search != '') {
+        if (search !== '') {
 
             getCountriesFromSearch(search);
         }
@@ -66,7 +66,7 @@ function Countries() {
             </div>
             <div className='row'>
                 <div className='col-12'>
-                    <ul>
+                    <div>
                         {
                             countries.map((country) => (
                                 <CountryDisplay
@@ -75,7 +75,7 @@ function Countries() {
                                 />
                             ))
                         }
-                    </ul>
+                    </div>
                 </div>
             </div>
         </div >

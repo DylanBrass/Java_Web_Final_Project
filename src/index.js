@@ -6,7 +6,10 @@ import Quiz from "./pages/Quiz";
 import Countries from "./pages/Countries";
 import NoPage from "./pages/NoPage";
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import MapPage from "./pages/mapPage";
+import "./styles.css";
+import "./App.css";
+import CreateQuestionPage from "./pages/CreateQuestionPage";
 
 export default function App() {
   return (
@@ -16,6 +19,8 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="Quiz" element={<Quiz />} />
           <Route path="Countries" element={<Countries />} />
+          <Route path="mapPage" element={<MapPage />} />
+          <Route path="CreateQuestion" element={<CreateQuestionPage />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

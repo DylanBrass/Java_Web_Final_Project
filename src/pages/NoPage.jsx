@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Home() {
+function NoPage() {
     return (
         <h1>this is the no page</h1>
     );
 }
 
-export default Home;
+export default NoPage;

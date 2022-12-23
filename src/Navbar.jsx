@@ -12,7 +12,7 @@ function Navbar() {
                 </div>
                 <div className="col-4 text-center">
                     <button>
-                        <Link to="/Quiz">Quiz</Link>
+                        <Link to="/Quiz" state={{ CountrySelected: null }}>Quiz</Link>
                     </button>
                 </div>
                 <div className="col-4 text-center">
