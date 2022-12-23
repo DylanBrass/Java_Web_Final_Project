@@ -11,7 +11,7 @@ import {
 const MapChart = ({ country }) => {
 
     const geoUrlEurope =
-        "https://raw.githubusercontent.com/deldersveld/topojson/master/continents/europe.json";
+        "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json";
     const geoUrl =
         "https://raw.githubusercontent.com/deldersveld/topojson/master/countries/" + country.map;
     return (
@@ -37,7 +37,7 @@ const MapChart = ({ country }) => {
                 </div>
                 <div className="col-6 w-50">
                     <ComposableMap projection="geoMercator">
-                        <ZoomableGroup center={[10, 50]} zoom={9}>
+                        <ZoomableGroup center={[15, 45]} zoom={6}>
                             <Geographies geography={geoUrl}>
                                 {({ geographies }) =>
                                     geographies.map((geo) => (

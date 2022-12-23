@@ -7,6 +7,7 @@ function MapPage() {
     const { CountrySelected } = location.state
 
     return (
+
         <div>
             <div className='text-center'>
                 <h1>The regions of</h1>

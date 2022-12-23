@@ -26,32 +26,56 @@ function QuestionDisplay({ question }) {
     }
 
     return (
-        <div className='row border'>
-            <h4>{question.Question}</h4>
-            <select id={question.Id}>
-                {
-                    shuffle(Answers).map((answer) => (
-                        <option key={"Option:" + answer}
-                        >{answer}</option>
-                    ))
+        <div className='container'>
+            <div className='row'>
+                <div className='row border'>
+                    <h4>{question.Question}</h4>
+                    <ol type='A' className='container'>
+                        <div className='row'>
+                            {
+                                shuffle(Answers).map((answer) => (
+                                    <div className='col-3'>
+                                        <li key={"Option:" + answer}
+                                        >{answer}</li>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </ol>
+                    <div className='text-center'>
+                        <select className='w-50' id={question.Id}>
+                            {
+                                Answers.map((answer) => (
+                                    <option key={"Option:" + answer}
+                                    >{answer}</option>
+                                ))
 
-                }
-            </select>
-            <div className='p-auto'>
-                <button className='w-25 btn btn-secondary' onClick={() => {
-                    if (document.getElementById(question.Id).value == question.Answer) {
-                        setVerify(true);
-                        setDiplay(false);
-                    } else {
-                        setVerify(false);
-                        setDiplay(true);
-                    }
-                }}>
-                    Verify
-                </button>
+                            }
+                        </select>
+                    </div>
+                    <div className='row'>
+                        <div className='col-11' />
+                        <div className='col-1'>
+                            <button className='btn btn-primary m-1' onClick={() => {
+                                if (document.getElementById(question.Id).value == question.Answer) {
+                                    setVerify(true);
+                                    setDiplay(false);
+                                } else {
+                                    setVerify(false);
+                                    setDiplay(true);
+                                }
+                            }}>
+                                Verify
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div className='row border mb-3'>
+                    {display && <div className='text-danger'>Wrong Answer !</div>}
+                    {verify && <div className='text-success'>Good Answer ! The Answer was {question.Answer}</div>}
+                </div>
             </div>
-            {display && <div className='text-danger'>Wrong Answer !</div>}
-            {verify && <div className='text-success'>Good Answer ! The Answer was {question.Answer}</div>}
+
         </div>
     )
 }

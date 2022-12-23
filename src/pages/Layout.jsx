@@ -1,12 +1,15 @@
 import React from "react";
-import {Outlet} from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import ScrollToTop from "../Components/ScrollToTop";
 import Navbar from "../Navbar";
 
 const Layout = () => {
   return (
     <>
-      <Navbar />
-      <Outlet />
+      <ScrollToTop>
+        <Navbar />
+        <Outlet />
+      </ScrollToTop>
     </>
   );
 };

@@ -59,19 +59,20 @@ function Quiz() {
 
     return (
         <div>
-            <h1>this is the quiz page</h1>
-            {
-                CountrySelected == null &&
-                < button onClick={() => {
-                    window.location.reload(false)
-                }}>
-                    New sets of Questions
+            <div className='text-center'>
+                <h1>this is the quiz page</h1>
+                {
+                    CountrySelected == null &&
+                    < button className='m-2' onClick={() => {
+                        window.location.reload(false)
+                    }}>
+                        New set of Questions
+                    </button>
+                }
+                <button className='m-2'>
+                    <Link to="/CreateQuestion">Know a bit about history ? Create your Question !</Link>
                 </button>
-            }
-            <button>
-                <Link to="/CreateQuestion">Know a bit about history ? Create your Question !</Link>
-            </button>
-
+            </div>
             <div className='container'>
                 {
                     getMultipleRandom(questions, 5).map((question) => (
