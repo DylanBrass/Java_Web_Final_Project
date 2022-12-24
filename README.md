@@ -7,11 +7,11 @@ This project was done for our final work in our Java Web class
 
 ## Description
 
-This website is a sort of dictionnary where information was gathered (quickly not professionally) and put together. 
+This website is a sort of dictionary where information was gathered (quickly not professionally) and put together. 
 
 There is a list of countries and a page to answer questions. 
 
-The questions page is composed of a component that displays it and in the component there is a verify button that tells you if you answered correctly or not. In the contries page there is two button on each country component, one of them brings you to a 'details' page with an interactive map and the others to the quiz page but with only questions that are for that country.
+The questions page is composed of a component that displays it and, in the component, there is a verify button that tells you if you answered correctly or not. In the countries page there is two buttons on each country component, one of them brings you to a 'details' page with an interactive map and the others to the quiz page but with only questions that are for that country.
 
 # Technologies 
 This project is based on React a technology created by Meta. 
@@ -46,7 +46,7 @@ The components folder contains the map library previously mentioned, how I displ
 
 
 The last one is more interesting because it is a fix that I needed because of the large amount o text I had. 
-The componend ScrollToTop is used to remedy the proble of starting in the middle of the page.
+The component ScrollToTop is used to remedy the problem of starting in the middle of the page.
 
 # Running the project
 
@@ -56,7 +56,7 @@ Since the package.json is still there you do not need to redownload the librarie
 
 # Challenges 
 
-The main problem I encountered was trying to edit what country the question relates to, it is the only part of my project that I failed at. But I am convince that with a bit more time I would have succeeded.
+The main problem I encountered was trying to edit what country the question relates to, it is the only part of my project that I failed at. But I am convinced that with a bit more time I would have succeeded.
 
 Other problems that were solved are :
 
@@ -72,7 +72,7 @@ I used this algorithm :
 ```
 This sorts the array then randomises it 
 
-A waekness to this array shuffler is explained here : https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array/18650169#18650169
+A weakness to this array shuffler is explained here : https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array/18650169#18650169
 
 But I still decided to use it because of it's simplicity and the realtive size of my project.
     
@@ -121,15 +121,15 @@ export default ScrollToTop;
 
 # Design
 
-The pages follow the same scructure
+The pages follow the same structure
 
 If a page requires a certain component to be repeated it is created as a component, as we see with CountryDisplay and QuestionDisplay.
 
 Otherwise everything is in the pages folder.
 
-The exception to this is the librairies that require a lot of code such as the map, because it is quite big I decided to put it as a component for ease of reading the code and for modifyin it. 
+The exception to this is the libraries that require a lot of code such as the map, because it is quite big I decided to put it as a component for ease of reading the code and for modifying it. 
 
-ScrollToTop is a component so it is created as such. 
+ScrollToTop is a component, so it is created as such. 
 
 Index.js is used simply for routing and Home.jsx is set as my index so that when the page is loaded it's where the user starts.
 
@@ -154,7 +154,7 @@ This is where the user answers questions, for now it's five question picked at r
 Here is a example of the question block :
 ![image](https://user-images.githubusercontent.com/71225455/209448790-6602400c-3441-4a26-8a7a-f96d471e4f07.png)
 
-The questions are easy, but can be made much hader !
+The questions are easy, but can be made much harder !
 
 
 On mobile the questions look like this : 
@@ -177,7 +177,7 @@ The countries each have their square :
 ![image](https://user-images.githubusercontent.com/71225455/209448999-f53eedd5-8fb4-4118-9aed-170902588ae4.png)
 
 
-The two button bring you to the quiz age that will only have question about that country and the first one bring you to the Map Page described below
+The two buttons bring you to the quiz age that will only have question about that country and the first one brings you to the Map Page described below
 
 On Mobile :
 
@@ -224,4 +224,3 @@ On desktop :
 On mobile :
 
 ![image](https://user-images.githubusercontent.com/71225455/209449292-33250336-9323-49db-88b7-c218b017cde7.png)
-
