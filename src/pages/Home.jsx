@@ -7,7 +7,7 @@ function Home() {
                 <h1>Website tour</h1>
             </div>
             <div className='row'>
-                <div className='col-6 border'>
+                <div className='col-12 col-md-6 border'>
                     <h2>
                         The goal of this website
                     </h2>
@@ -18,7 +18,7 @@ function Home() {
                         An important aspect of this website is to bring information that is reliable and confirmed to be true. We take our information from Wikipedia and google(actual google not a google search) two widely trusted source.
                     </p>
                 </div>
-                <div className='col-6 border'>
+                <div className='col-12 col-md-6 border'>
                     <h2>
                         The feature of this website
                     </h2>

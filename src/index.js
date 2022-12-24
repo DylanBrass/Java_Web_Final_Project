@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import MapPage from "./pages/mapPage";
 import "./App.css";
 import CreateQuestionPage from "./pages/CreateQuestionPage";
+import EditPage from "./pages/EditPage";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="Quiz" element={<Quiz />} />
+          <Route path="EditPage" element={<EditPage />} />
           <Route path="Countries" element={<Countries />} />
           <Route path="mapPage" element={<MapPage />} />
           <Route path="CreateQuestion" element={<CreateQuestionPage />} />

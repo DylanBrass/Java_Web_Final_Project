@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react';
+import { BrowserRouter, Route, Link } from "react-router-dom";
 
 function QuestionDisplay({ question }) {
 
@@ -29,12 +30,15 @@ function QuestionDisplay({ question }) {
         <div className='container'>
             <div className='row'>
                 <div className='row bg-secondary text-light rounded' style={{ border: "5px solid black" }}>
-                    <h4 className='mt-3'>{question.Question}</h4>
+                    <h4 className='mt-3 col-12 col-sm-10'>{question.Question}</h4>
+                    <div className='text-end col-12 col-sm-2'>
+                        <Link className="btn btn-outline-light" to="/EditPage" state={{ QuestionSelected: question }}>Edit </Link>
+                    </div>
                     <ol type='A' className='container mx-5'>
                         <div className='row'>
                             {
                                 shuffle(Answers).map((answer) => (
-                                    <div className='col-3'>
+                                    <div className='col-12 col-md-3'>
                                         <li key={"Option:" + answer}
                                         >{answer}</li>
                                     </div>
@@ -54,8 +58,8 @@ function QuestionDisplay({ question }) {
                         </select>
                     </div>
                     <div className='row'>
-                        <div className='col-10' />
-                        <div className='col-2'>
+                        <div className='col-12 col-md-10' />
+                        <div className='col-12 col-md-2'>
                             <button className='m-1 w-100' onClick={() => {
                                 if (document.getElementById(question.Id).value == question.Answer) {
                                     setVerify(true);

@@ -5,6 +5,7 @@ import Navbar from "../Navbar";
 
 const Layout = () => {
   return (
+
     <div className="bg-light">
       <ScrollToTop>
         <Navbar />

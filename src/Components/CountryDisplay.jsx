@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 
 function Countries({ country }) {
     return (
-        <div className='container m-2 text-center rounded' style={{ border: '4px solid black', backgroundColor: "#e3f2fd",fontFamily:'Agency FB' }}>
+        <div className='container m-2 text-center rounded' style={{ border: '4px solid black', backgroundColor: "#e3f2fd", fontFamily: 'Agency FB' }}>
             <h1><strong>{country.countryName}</strong></h1>
             <p>{country.description}</p>
             {
@@ -27,11 +27,11 @@ function Countries({ country }) {
                     <p>It was created by {country.flagToday.creator}</p>
                 </div>
             }
-            <Link className="w-25 btn btn-outline-dark mb-1" to="/mapPage" state={{ CountrySelected: country }}>More information</Link>
+            <Link className="w-50 btn btn-outline-dark mb-1" to="/mapPage" state={{ CountrySelected: country }}>More info</Link>
             <br></br>
 
 
-            <Link className="w-25 btn btn-outline-dark mb-1" to="/Quiz" state={{ CountrySelected: country }}>Take a Quiz on {country.countryName}</Link>
+            <Link className="w-50 btn btn-outline-dark mb-1" to="/Quiz" state={{ CountrySelected: country }}>Quiz on {country.countryName}</Link>
         </div>
     )
 }
