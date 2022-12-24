@@ -47,3 +47,12 @@ The components folder contains the map library previously mentioned, how I displ
 
 The last one is more interesting because it is a fix that I needed because of the large amount o text I had. 
 The componend ScrollToTop is used to remedy the proble of starting in the middle of the page.
+
+# Running the project
+
+To run the project you simply need to download node module for this react app. And then start my backend code (we use intellij) and run it on port 8080.
+Since the package.json is still there you do not need to redownload the libraries used.
+
+
+# Challenges 
+
