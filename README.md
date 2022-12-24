@@ -56,3 +56,65 @@ Since the package.json is still there you do not need to redownload the librarie
 
 # Challenges 
 
+The main problem I encountered was trying to edit what country the question relates to, it is the only part of my project that I failed at. But I am convince that with a bit more time I would have succeeded.
+
+Other problems that were solved are :
+
+#### The randomisation of the questions 
+
+I used this algorithm :
+```jsx
+      const getMultipleRandom = (arr, num) => {
+        const shuffled = [...arr].sort(() => 0.5 - Math.random());
+      
+        return shuffled.slice(0, num);
+    }
+```
+This sorts the array then randomises it 
+
+A waekness to this array shuffler is explained here : https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array/18650169#18650169
+
+But I still decided to use it because of it's simplicity and the realtive size of my project.
+    
+#### The randomisation of the answers 
+
+This is the algorithm I ended using : 
+
+```jsx
+const shuffle = (array) => {
+        if (verify == false) {
+            for (var i = array.length - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+        }
+        return array;
+    }
+
+```
+
+My if statement is to make sure that the question was not answered correcty otherwise this is a common shuffling algorithm for arrays
+
+
+#### The scrollToTop
+
+Here is the previously mentionned fix to the page rendering in the middle of my huge block of text
+
+```jsx
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+const ScrollToTop = ({ children }) => {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return children || null;
+};
+
+export default ScrollToTop;
+```
