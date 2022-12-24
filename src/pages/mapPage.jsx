@@ -10,10 +10,7 @@ function MapPage() {
 
         <div>
             <div className='text-center'>
-                <h1>The regions of</h1>
-                <h1>
-                    {CountrySelected.countryName}
-                </h1>
+                <h1>The regions of  {CountrySelected.countryName}</h1>
             </div>
             <div className='container ' >
                 <div className='row'>
@@ -23,11 +20,11 @@ function MapPage() {
                                 <MapChart
                                     country={CountrySelected}
                                 />
-                                <div className='bg-dark'>
-                                    <span className='text-white bg-dark'>Can you find {CountrySelected.countryName} on the european map ?</span>
+                                <div >
+                                    <span className='text-white bg-dark'> Can you find {CountrySelected.countryName} on the european map? </span>
                                 </div>
                             </div>
-                            <p>
+                            <p className='text-block'>
                                 {CountrySelected.historyText}
                             </p>
                         </div>

@@ -28,9 +28,9 @@ function QuestionDisplay({ question }) {
     return (
         <div className='container'>
             <div className='row'>
-                <div className='row border'>
-                    <h4>{question.Question}</h4>
-                    <ol type='A' className='container'>
+                <div className='row bg-secondary text-light rounded' style={{ border: "5px solid black" }}>
+                    <h4 className='mt-3'>{question.Question}</h4>
+                    <ol type='A' className='container mx-5'>
                         <div className='row'>
                             {
                                 shuffle(Answers).map((answer) => (
@@ -54,9 +54,9 @@ function QuestionDisplay({ question }) {
                         </select>
                     </div>
                     <div className='row'>
-                        <div className='col-11' />
-                        <div className='col-1'>
-                            <button className='btn btn-primary m-1' onClick={() => {
+                        <div className='col-10' />
+                        <div className='col-2'>
+                            <button className='m-1 w-100' onClick={() => {
                                 if (document.getElementById(question.Id).value == question.Answer) {
                                     setVerify(true);
                                     setDiplay(false);
@@ -70,9 +70,9 @@ function QuestionDisplay({ question }) {
                         </div>
                     </div>
                 </div>
-                <div className='row border mb-3'>
+                <div className='row mb-3'>
                     {display && <div className='text-danger'>Wrong Answer !</div>}
-                    {verify && <div className='text-success'>Good Answer ! The Answer was {question.Answer}</div>}
+                    {verify && <div className='text-success '>Good Answer ! The Answer was {question.Answer}</div>}
                 </div>
             </div>
 

@@ -7,7 +7,6 @@ import Countries from "./pages/Countries";
 import NoPage from "./pages/NoPage";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MapPage from "./pages/mapPage";
-import "./styles.css";
 import "./App.css";
 import CreateQuestionPage from "./pages/CreateQuestionPage";
 

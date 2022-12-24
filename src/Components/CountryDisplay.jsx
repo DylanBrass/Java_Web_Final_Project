@@ -4,18 +4,18 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 
 function Countries({ country }) {
     return (
-        <div className='container border text-center'>
-            <h1>{country.countryName}</h1>
+        <div className='container m-2 text-center rounded' style={{ border: '4px solid black', backgroundColor: "#e3f2fd",fontFamily:'Agency FB' }}>
+            <h1><strong>{country.countryName}</strong></h1>
             <p>{country.description}</p>
             {
                 country.famousFlagPast != null &&
                 <div>
                     <h1>Most Famous ancient Flag</h1>
-                    <img className='rounded w-25' src={country.famousFlagPast} />
+                    <img className='rounded w-25 border' src={country.famousFlagPast} />
                 </div>
             }
             <h2>Founded in {country.dateFounded}</h2>
-            <h3>How long ago the country was created : <span> </span>
+            <h3>{country.countryName} was founded : <span> </span>
                 <TimeAgo date={country.dateFounded} />
             </h3>
             {
@@ -27,11 +27,11 @@ function Countries({ country }) {
                     <p>It was created by {country.flagToday.creator}</p>
                 </div>
             }
-            <Link to="/mapPage" state={{ CountrySelected: country }}>See on map</Link>
+            <Link className="w-25 btn btn-outline-dark mb-1" to="/mapPage" state={{ CountrySelected: country }}>More information</Link>
             <br></br>
 
 
-            <Link to="/Quiz" state={{ CountrySelected: country }}>Quiz</Link>
+            <Link className="w-25 btn btn-outline-dark mb-1" to="/Quiz" state={{ CountrySelected: country }}>Take a Quiz on {country.countryName}</Link>
         </div>
     )
 }

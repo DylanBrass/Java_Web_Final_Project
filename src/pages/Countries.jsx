@@ -57,16 +57,19 @@ function Countries() {
     return (
         <div className='container'>
             <div className='row text-center'>
-                <h1>this is the Countries page</h1>
+                <h1>Inform yourself about a Country !</h1>
                 <form onSubmit={formSubmit}>
-                    <input id='search' name='search' placeholder='Search for a specific country' />
-                    <button className='search-button' type='submit'>Search</button>
+                    <input className='w-25 m-3' id='search' name='search' placeholder='Search for a specific country' />
+                    <button className='search-button m-3' type='submit'>Search</button>
                 </form>
-
+                {
+                    document.getElementById("search") != null && countries.length <= 0 && <div>Sorry no result came back for : {document.getElementById("search").value}</div>
+                }
             </div>
             <div className='row'>
-                <div className='col-12'>
+                <div className='col-12 text-center'>
                     <div>
+
                         {
                             countries.map((country) => (
                                 <CountryDisplay
