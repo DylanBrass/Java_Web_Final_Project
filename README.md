@@ -3,29 +3,30 @@ Front end
 
 
 # What is this project
-This project was done for our final work in our Java Web class
+This project is for our final work in our Java Web class
 
 ## Description
 
-This website is a sort of dictionary where information was gathered (quickly not professionally) and put together. 
+The website is a sort of dictionary where information was gathered (quickly not professionally) and put together. 
 
-There is a list of countries and a page to answer questions. 
+There is a list of countries and a page which it is possible to answer questions. 
 
-The questions page is composed of a component that displays it and, in the component, there is a verify button that tells you if you answered correctly or not. In the countries page there is two buttons on each country component, one of them brings you to a 'details' page with an interactive map and the others to the quiz page but with only questions that are for that country.
+The questions page is composed of a component that displays it and, in the component, there is a verify button that tells you if you answered correctly or not. In the countries page there is two buttons on each country component, one of them brings you to a 'details' page with an interactive map and the others to the quiz page but with only questions that are for that specific country.
 
 # Technologies 
-This project is based on React a technology created by Meta. 
+This project is based on React, a technology created by Meta. 
 
 It uses react router (https://reactrouter.com/en/main)
-As well as TimeAgo (https://github.com/nmn/react-timeago) and React Simple Maps (https://www.react-simple-maps.io/) 
+As well as TimeAgo (https://github.com/nmn/react-timeago) 
+and React Simple Maps (https://www.react-simple-maps.io/) 
 
-Spring Boot was used for the backend which can be seen here (https://github.com/DylanBrass/CountriesWebsiteProject/blob/master/README.md)
+Spring Boot was used for the backend which can be seen here: (https://github.com/DylanBrass/CountriesWebsiteProject/blob/master/README.md)
 
-These are all the important files : 
+All the important files : 
 
 ![image](https://user-images.githubusercontent.com/71225455/209422515-f22ed540-4226-4599-a39d-30cd794f9f36.png)
 
-We can see that for router I had to create the pages folder and all of these pages are linked with the index.js which the code ressembles this :
+For the router, I had to create the pages folder and all of these pages are linked with the index.js which the code ressembles this :
 ```jsx   
 <BrowserRouter>
       <Routes>
@@ -42,10 +43,10 @@ We can see that for router I had to create the pages folder and all of these pag
     </BrowserRouter>
    ```
    
-The components folder contains the map library previously mentioned, how I display my questions and my countries
+The components folder contains the map library previously mentioned which reresents how I display my questions and my countries
 
 
-The last one is more interesting because it is a fix that I needed because of the large amount o text I had. 
+The last one is more interesting because it is a fix that I needed because of the large amount of text I had. 
 The component ScrollToTop is used to remedy the problem of starting in the middle of the page.
 
 # Running the project
