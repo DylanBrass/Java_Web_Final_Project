@@ -26,7 +26,7 @@ These are all the important files :
 ![image](https://user-images.githubusercontent.com/71225455/209422515-f22ed540-4226-4599-a39d-30cd794f9f36.png)
 
 We can see that for router I had to create the pages folder and all of these pages are linked with the index.js which the code ressembles this :
-`jsx   
+```jsx   
 <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -40,7 +40,7 @@ We can see that for router I had to create the pages folder and all of these pag
         </Route>
       </Routes>
     </BrowserRouter>
-    `
+   ```
    
 The components folder contains the map library previously mentioned, how I display my questions and my countries
 
