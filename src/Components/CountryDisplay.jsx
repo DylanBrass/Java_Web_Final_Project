@@ -19,12 +19,12 @@ function Countries({ country }) {
                 <TimeAgo date={country.dateFounded} />
             </h3>
             {
-                country.flagToday != null &&
+                country.modernFlag != null &&
                 <div>
                     <h1>Current Flag of {country.countryName}</h1>
-                    <img alt={country.flagToday.description} title={country.flagToday.description} className='rounded w-25' src={country.flagToday.flagPhoto} />
-                    <p>The date it was first used :{country.flagToday.dateUsed}</p>
-                    <p>It was created by {country.flagToday.creator}</p>
+                    <img alt={country.modernFlag.description} title={country.modernFlag.description} className='rounded w-25' src={country.modernFlag.flagPhoto} />
+                    <p>The date it was first used :{country.modernFlag.dateUsed}</p>
+                    <p>It was created by {country.modernFlag.creator}</p>
                 </div>
             }
             <Link className="w-50 btn btn-outline-dark mb-1" to="/mapPage" state={{ CountrySelected: country }}>More info</Link>

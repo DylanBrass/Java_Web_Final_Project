@@ -8,8 +8,6 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 function EditPage() {
     const location = useLocation()
     const { QuestionSelected } = location.state
-    const [CountrySelected, setCountrySelected] = useState(QuestionSelected.country);
-    const [countries, setCountries] = useState([]);
 
     const deleteQuestion = (id) => {
         axios.delete("http://localhost:8080/api/questions/" + id)
@@ -26,37 +24,21 @@ function EditPage() {
     }
     const onSubmit = (event) => {
         event.preventDefault();
-        setCountrySelected(countries[event.target.elements.Country.value]);
-        console.log(CountrySelected);
-        console.log(event.target.elements.Country.value);
         const question = {
             "question": event.target.elements.Question.value,
             "answer": event.target.elements.Answer.value,
             "fakeAnswerOne": event.target.elements.FakeOne.value,
             "fakeAnswerTwo": event.target.elements.FakeTwo.value,
             "fakeAnswerThree": event.target.elements.FakeThree.value,
-            "country": CountrySelected
         }
 
         editQuestion(QuestionSelected.Id, question);
     }
 
-    const loadCountriesFromAPI = () => {
-        axios.get("http://localhost:8080/api/countries")
-            .then(function (response) {
-                if (response.status === 200) {
-                    console.log(response);
-                    setCountries(response.data);
-                }
-            })
-            .catch(function (error) {
-                // handle error
-                console.log(error);
-            })
-    }
+
+
 
     useEffect(() => {
-        loadCountriesFromAPI();
         document.getElementById('Q').value = QuestionSelected.Question;
         document.getElementById('A').value = QuestionSelected.Answer;
         document.getElementById('FO').value = QuestionSelected.FakeAnswerOne;
@@ -67,7 +49,7 @@ function EditPage() {
 
     const editQuestion = (id, question) => {
         console.log(id)
-        axios.put("http://localhost:8080/api/questions/" + id, question)
+        axios.put('http://localhost:8080/api/questions/' + id, question)
             .then(function (response) {
                 if (response.status == 200) {
                     alert("Question was modified");
@@ -120,6 +102,7 @@ function EditPage() {
                             <input className='w-100 m-3' required id='FTH' name='FakeThree' placeholder='What is a erroneous answer to that question ?' />
                         </div>
                     </div>
+
                     <div className='row'>
                         <div className='col-12'>
 

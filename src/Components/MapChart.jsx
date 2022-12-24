@@ -17,7 +17,7 @@ const MapChart = ({ country }) => {
     return (
         <div className="container">
             <div className="row">
-                <div className="col-6 w-50">
+                <div className="col-12 col-md-6">
                     <ComposableMap projection="geoMercator">
                         <ZoomableGroup center={[10, 50]} zoom={5}>
                             <Geographies geography={geoUrlEurope}>
@@ -35,7 +35,7 @@ const MapChart = ({ country }) => {
                         </ZoomableGroup>
                     </ComposableMap>
                 </div>
-                <div className="col-6 w-50">
+                <div className="col-12 col-md-6">
                     <ComposableMap projection="geoMercator">
                         <ZoomableGroup center={[15, 45]} zoom={6}>
                             <Geographies geography={geoUrl}>

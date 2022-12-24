@@ -23,7 +23,7 @@ function Home() {
                         The feature of this website
                     </h2>
                     <p>
-                        This website allows you to answer questions about multiple european countries. The user can also add questions if he or she so desires. Since these questions are added by random people their sources are not to be trusted.
+                        This website allows you to answer questions about multiple european countries. The user can also add or edit questions if he or she so desires. Since these questions are added by random people their sources are not to be trusted.
                     </p>
                     <p>
                         The information on the countries comes from Wikipedia (to be more precise the information in the page with the map). Other wise the small description was taken from a quick google search of the country.

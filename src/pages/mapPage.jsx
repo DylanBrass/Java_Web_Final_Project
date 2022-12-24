@@ -16,7 +16,7 @@ function MapPage() {
                 <div className='row'>
                     <div className='col-12'>
                         <div>
-                            <div className='w-75 border border-4 m-auto'>
+                            <div className='border border-4 m-auto'>
                                 <MapChart
                                     country={CountrySelected}
                                 />

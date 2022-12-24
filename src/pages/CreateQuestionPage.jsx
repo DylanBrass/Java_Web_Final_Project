@@ -2,20 +2,23 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 
 function CreateQuestionPage() {
+    const [countries, setCountries] = useState([]);
+
     const onSubmit = (event) => {
         event.preventDefault();
-
         const question = {
-            "Question": event.target.elements.Question.value,
-            "Answer": event.target.elements.Answer.value,
-            "FakeAnswerOne": event.target.elements.FakeOne.value,
-            "FakeAnswerTwo": event.target.elements.FakeTwo.value,
-            "FakeAnswerThree": event.target.elements.FakeThree.value
+            "question": event.target.elements.Question.value,
+            "answer": event.target.elements.Answer.value,
+            "fakeAnswerOne": event.target.elements.FakeOne.value,
+            "fakeAnswerTwo": event.target.elements.FakeTwo.value,
+            "fakeAnswerThree": event.target.elements.FakeThree.value,
         }
         addQuestion(question, event.target.elements.Country.value);
 
     }
-    const [countries, setCountries] = useState([]);
+
+
+
 
     const loadCountriesFromAPI = () => {
         axios.get("http://localhost:8080/api/countries")
@@ -62,29 +65,34 @@ function CreateQuestionPage() {
                 <div className='container'>
                     <div className='row'>
                         <div className='col-12'>
+                            <label className='d-flex d-md-none'>What is the question ?</label>
                             <input className='w-75 m-3' required id='Q' name='Question' placeholder='What is the question ?' />
                         </div>
                     </div>
                     <div className='row'>
                         <div className='col-12'>
+                            <label className='d-flex d-md-none'>What is the answer to that question ?</label>
                             <input className='w-75 m-3' required id='A' name='Answer' placeholder='What is the answer to that question ?' />
                         </div>
                     </div>
 
                     <div className='row'>
                         <div className='col-12'>
+                            <label className='d-flex d-md-none'>What is a erroneous answer to that question ?</label>
                             <input className='w-75 m-3' required id='FO' name='FakeOne' placeholder='What is a erroneous answer to that question ?' />
                         </div>
                     </div>
 
                     <div className='row'>
                         <div className='col-12'>
+                            <label className='d-flex d-md-none'>What is a erroneous answer to that question ?</label>
                             <input className='w-75 m-3' required id='FT' name='FakeTwo' placeholder='What is a erroneous answer to that question ?' />
                         </div>
                     </div>
 
                     <div className='row'>
                         <div className='col-12'>
+                            <label className='d-flex d-md-none'>What is a erroneous answer to that question ?</label>
                             <input className='w-75 m-3' required id='FTH' name='FakeThree' placeholder='What is a erroneous answer to that question ?' />
                         </div>
                     </div>
@@ -104,7 +112,6 @@ function CreateQuestionPage() {
                                 }
                             </select>
                         </div>
-
                     </div>
                     <div className='row'>
                         <div className='col-12'>

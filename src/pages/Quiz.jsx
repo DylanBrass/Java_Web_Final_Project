@@ -70,7 +70,7 @@ function Quiz() {
                     </button>
                 }
                 <button className='m-2 clickAnim'>
-                    <Link to="/CreateQuestion">Know a bit about history? Create your Question !</Link>
+                    <Link to="/CreateQuestion">Know a bit about history?</Link>
                 </button>
             </div>
             {
